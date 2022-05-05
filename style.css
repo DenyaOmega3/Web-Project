@@ -4,9 +4,10 @@
 	font-family:'Courier New', Courier, monospace;
 }
 
-h1 {
+h2 {
     color: rgb(0,0,0,0.7);
 	text-align: center;
+	margin-bottom: 4%;
 }
 
 p {
@@ -187,6 +188,14 @@ aside {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding-bottom: 4%;
+}
+
+hr {
+	border-color: rgb(128, 128, 128, 0.5);
+	width: 75%;
+	margin: auto;
+	margin-bottom: 4%;
 }
 
 .image {
@@ -200,6 +209,42 @@ aside {
 
 .content {
 	margin: 2% 2% 0 2%;
+}
+
+#content2 {
+	display: grid;
+	flex-direction: column;
+	row-gap: 2%;
+	/*background-color: pink;*/
+}
+
+.mathSection {
+	/*background-color: aqua;*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#sectionImage {
+	width: 100%;
+	/*background-color: antiquewhite;*/
+}
+
+#sectionImage>img {
+	width: 100%;
+}
+
+.mathSection>button {
+	background-color: rgb(59, 175, 190);
+	color: white;
+	width: 120px;
+	letter-spacing: 0.25px;
+}
+
+#test {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
 }
 
 @media (min-width: 667px) {
@@ -222,4 +267,19 @@ aside {
 		width: 200px;
 		height: 200px;
 	}
+
+	.mathSection {
+		margin-bottom: 0%;
+	}
+
+	#content2 {
+		display: flex;
+		flex-direction: row;
+		gap: 5%;
+		padding-left: 2%;
+		padding-right: 2%;
+	}
+
+	
 }
+
