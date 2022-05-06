@@ -15,3 +15,5 @@ $(window).resize(function() {
         $('aside').hide();
     }
 });
+
+$("#currentYear").html(new Date().getFullYear());
