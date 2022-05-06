@@ -4,6 +4,10 @@
 	font-family:'Courier New', Courier, monospace;
 }
 
+html, body {
+	height: 100%;
+}
+
 h2 {
     color: rgb(0,0,0,0.7);
 	text-align: center;
@@ -151,10 +155,10 @@ ul {
 
 aside {
 	display: none;
-	position: absolute;
-	height: 100%;
-	right: 0;
+	position: fixed;
 	top: 0;
+	right: 0;
+	bottom: 0;
 	background-color: aliceblue;
 }
 
