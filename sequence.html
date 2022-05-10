@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <base target ="_blank">
+        <!--<base target ="_blank">-->
         <title>Main Page</title>
         <link rel="stylesheet" href="style.css" type="text/css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +21,7 @@
         <div id = "searchSocialMedia">
             <div id = "accounts">
                 <ul>
-                    <li> <div class="circle"> <a href="https://web.telegram.org/z/"> <img src="Navigation Images/TelegramImage.png" class = "icon" /> </a> </div> </li>
+                    <li> <div class="circle"> <a href="https://t.me/Denya_alpha"> <img src="Navigation Images/TelegramImage.png" class = "icon" /> </a> </div> </li>
                     <li> <div class="circle">  <a href = "https://www.instagram.com/?hl=en"> <img src="Navigation Images/InstagramImage.png" class = "icon" /> </a> </div> </li>
                     <li> <div class="circle">  <a href = "https://twitter.com/?lang=en"> <img src="Navigation Images/TwitterImage.png" class = "icon" /> </a> </div> </li>
                 </ul>
@@ -127,11 +127,11 @@
         </div>
 
         <div class="definition">
-            <p>Число <span class="maths">\( a \in \mathbb{R} \)</span> називається <em>границею послідовності</em> <span class="maths">\( \{a_n, n \geq 1\} \)</span>, якщо виконується таке твердження:
+            <p id = "def_sequence_limit">Число <span class="maths">\( a \in \mathbb{R} \)</span> називається <em>границею послідовності</em> <span class="maths">\( \{a_n, n \geq 1\} \)</span>, якщо виконується таке твердження:
                 <br/>
                 <span class="maths">\( \forall \varepsilon > 0: \exists N \in \mathbb{N}: \forall n \geq N: a_n \in (a-\varepsilon,a+\varepsilon) \)</span>
                 <br/>
-                Позначення: <span class="maths">\( \displaystyle \lim_{n \to \infty} a_n = a \)</span>
+                Позначення: <span class="maths">\( \displaystyle \lim_{n \to \infty} a_n = a \)</span> або інколи <span class="maths">\(a_n \to a, n \to \infty \)</span>.
             </p>
         </div>
 
@@ -155,6 +155,50 @@
                 Підсумуємо, задаємо <span class="maths">(let eps)</span>, тоді існує <span class="maths">\( N = \left[ \dfrac{1}{\varepsilon} \right] + 1 \)</span>, такий, що
                 нерівність <span class="maths">\( \left|{\dfrac{1}{n} - 0} \right| < \varepsilon \)</span> виконується для будь-яких <span class="maths">\(n \geq N\)</span>.
                 Отже <span class="maths">\( \displaystyle \lim_{n \to \infty} \frac{1}{n} = 0 \)</span>.
+            </p>
+            <p>А зараз ми розглянемо більш складне доведення за означенням.</p>
+        </div>
+        
+        <div class="example">
+            <p>Довести за означенням, що <span class="maths">\( \displaystyle \lim_{n \to \infty} \sqrt[n]{n} = 1 \)</span> </p>
+        </div>
+        
+        <div class="solution">
+            <p>Розглянемо послідовність <span class="maths">\( \{ \sqrt[n]{n}, n \geq 1 \} \)</span>. Використовуючи <a href="#def_sequence_limit">означення границі</a>, ми хочемо довести, що
+            <span class="maths">\( \forall \varepsilon > 0: \exists N \in \mathbb{N}: \forall n \geq N: | \sqrt[n]{n} -1 | < \varepsilon \)</span>.
+            <br/>
+            Застосуємо <a href="https://uk.wikipedia.org/wiki/Нерівність_середнього_арифметичного_та_геометричного">нерівність Коші</a> - отримаємо оцінку 
+            <span class="maths">\( \sqrt[n]{n} = 
+                \sqrt[n]{ \sqrt{n} \sqrt{n} \cdot 1 \dots 1} \leq
+                 \dfrac{\sqrt{n}+\sqrt{n}+1+\dots+1}{n} = \dfrac{2\sqrt{n} + n-2}{n} = \dfrac{2}{\sqrt{n}} + 1 - \dfrac{2}{n} < \dfrac{2}{\sqrt{n}} + 1 (*) \)</span>.
+            <br/>
+            Тоді <span class="maths">\( |\sqrt[n]{n} - 1| = \sqrt[n]{n} - 1 \overset{(*)}{<} \dfrac{2}{\sqrt{n}} + 1 - 1 = \dfrac{2}{\sqrt{n}} \overset{\text{хочемо}}{<} \varepsilon \)</span>.
+            <br/>
+            Звідси отримаємо <span class="maths">\( \sqrt{n} > \dfrac{2}{\varepsilon} \iff n > \dfrac{4}{\varepsilon^2} \)</span>. Якщо покласти <span class="maths">N = \(
+                \left[ \dfrac{4}{\varepsilon} \right] + 1 \)</span>, то ми цим змогли довести, що наше означення виконано <span class="maths">\( \forall \varepsilon > 0 \)</span>.
+            <br/>
+            Отже, <span class="maths">\( \displaystyle \lim_{n \to \infty} \sqrt[n]{n} = 1 \)</span>
+            </p>
+        </div>
+
+        <div class="text">
+            <p>Віднині виникає питання, а якщо для такої послідовності границя є, то чи буде вона єдиною? Виявляється, що так, це буде розписано наступною теоремою:</p>
+        </div>
+
+        <div class="theorem">
+            <p>Задано послідовність <span class="maths">\( \{a_n, n \geq 1 \} \)</span>. Припустимо, що <span class="maths">\(a_n \to a_1, a_n \to a_2, n \to \infty \)</span>,
+            тобто послідовність має дві границі. Тоді <span class="maths">\(a_1 = a_2\)</span>.</p>
+        </div>
+
+        <div class="proof">
+            <p>Припустимо, що <span class="maths">\(a_1 \neq a_2\)</span>. Розпишемо те, що нам дано через <a href="#def_sequence_limit">означення границі</a>. Оскільки означення
+            виконано для будь-якого <span class="maths">(let eps)</span>, то зокрема для <span class="maths">\( \varepsilon = \dfrac{|a_2-a_1|}{2} > 0 \)</span>.
+            Тоді існують <span class="maths">\( N_1,N_2 \)</span>, для яких <span class="maths">\( |a_n - a_1| < \varepsilon \)</span> виконано <span class="maths">
+                \( \forall n \geq N_1 \)</span> та <span class="maths">\( |a_n - a_2| < \varepsilon \)</span> виконано <span class="maths">
+                    \( \forall n \geq N_2 \)</span>. Для того щоб ці нерівності виконувались одночано, ми зафіксуємо новий номер <span class="maths">\( N = \max \{ N_1,N_2 \} \)</span>
+                <br/>
+                Але тепер ми отримаємо нову оцінку, використовуючи <a>нерівність трикутника</a>: <span class="maths">\( |a_1 - a_2| = |a_1 - a + a - a_2| \leq |a_1 - a| + 
+                |a_2 - a| < 2 \varepsilon = |a_1-a_2| \)</span>. Тобто <span class="maths">\( |a_1-a_2| < |a_1-a_2| \)</span>, що не є можливим.
             </p>
         </div>
     </div>

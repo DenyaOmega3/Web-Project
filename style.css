@@ -14,6 +14,9 @@ html, body {
 	height: 100%;
 	font-size: 100%;
 	font-family:'Courier New', Courier, monospace;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 }
 
 h2 {
@@ -57,6 +60,10 @@ input {
 	width: 120px;
 }
 
+a {
+	text-decoration: none;
+}
+
 /*header*/
 header {
 	display: none;
@@ -86,6 +93,12 @@ header {
 	max-width:100%;
 	max-height:100%;
 	object-fit: cover;
+}
+
+.qed {
+	background-color: black;
+	width: 10px;
+	height: 10px;
 }
 
 .icon {
@@ -183,6 +196,10 @@ aside {
 	margin: 2% 2% 0 2%;
 }
 
+.content a {
+	color:rgb(59, 175, 190);
+}
+
 #content2 {
 	display: grid;
 	flex-direction: column;
@@ -262,21 +279,15 @@ footer p {
 }
 
 
-.definition {
+.definition, .example, .solution, .theorem, .proof {
 	background-color:antiquewhite;
 	display: block;
-	overflow: scroll;
+	overflow-x: scroll;
 	margin-top: 4%;
 	padding-top: 1%;
 	border: 2px dashed rgb(230, 191, 141);
 	box-shadow: #252525 2px;
 }
-
-.definition p {
-	color: black;
-	
-}
-
 
 .content img {
 	width: 100%;
@@ -294,7 +305,6 @@ footer p {
 .maths {
 	font-family: 'Times New Roman', Times, serif;
 }
-
 
 
 @media (min-width: 667px) {
