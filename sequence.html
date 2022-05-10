@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<base target ="_blank">-->
+        <title>Main Page</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous">
+        </script>
+
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+
+    <body>
+    <header>
+        <div id = "searchSocialMedia">
+            <div id = "accounts">
+                <ul>
+                    <li> <div class="circle"> <a href="https://t.me/Denya_alpha"> <img src="Navigation Images/TelegramImage.png" class = "icon" /> </a> </div> </li>
+                    <li> <div class="circle">  <a href = "https://www.instagram.com/?hl=en"> <img src="Navigation Images/InstagramImage.png" class = "icon" /> </a> </div> </li>
+                    <li> <div class="circle">  <a href = "https://twitter.com/?lang=en"> <img src="Navigation Images/TwitterImage.png" class = "icon" /> </a> </div> </li>
+                </ul>
+            </div>
+
+            <div id = "searchInWeb">
+                <div id = "accounts2"><input type="text" placeholder="Search.."/></div>
+                <div id = "accounts3"><button type="button">Click</button></div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div id = "company"> <span style="color:black; font-size: 30px;">M</span>ath <span style="color:black; font-size: 30px;">Σ</span>tori</p></div>
+
+        <div id = "navigation">
+            <ul>
+                <li><a>Home</a></li>
+                <li><a>Formulas</a></li>
+                <li><a>Login</a></li>
+            </ul>
+        </div>
+
+        <div id = "navigationAlternative">
+            ≡
+        </div>
+    </nav>
+
+    <aside>
+        <div id = "sidebarNavigation">
+            <ul>
+                <li id="close"><a>x</a></li>
+                <li><a>Home</a></li>
+                <li><a>Formulas</a></li>
+                <li><a>Login</a></li>
+            </ul>
+        </div>
+
+        <div id = "sidebarSocial">
+            <ul>
+                <li> <div class="circle"> <a href="https://web.telegram.org/z/"> <img src="Navigation Images/TelegramImage.png" class = "icon" /> </a> </div> </li>
+                <li> <div class="circle">  <a href = "https://www.instagram.com/?hl=en"> <img src="Navigation Images/InstagramImage.png" class = "icon" /> </a> </div> </li>
+                <li> <div class="circle">  <a href = "https://twitter.com/?lang=en"> <img src="Navigation Images/TwitterImage.png" class = "icon" /> </a> </div> </li>
+            </ul>
+        </div>
+    </aside>
+
+
+    <div class="content">
+        <h3>Послідовності. Вступ до границь.</h3>
+        <div class="text">
+            <p>Із чого треба почати, так це з означення послідовності. Для початку розглянемо приклад, що допоможе простіше зрозуміти надане скоро означення.</p>
+            <p>Скажемо, у нас є ось такі числа:<span class = "maths">\( \{ 3,5,-1, 1.5, 10, 0, 3, \dots \} \)</span>. Будемо вважати в такому випадку, що першому числу 
+                ставиться в відповідність перше число з цього рядку, тобто <span class = "maths">\( 3 \)</span>, другому числу ставиться в відповідність друге число з цього 
+                рядку, тобто <span class = "maths">\( 5 \)</span> тощо. Це можна позначити іншим чином:<span class="maths">\(a_1 = 3, a_2 = 5 \)</span>. Літерою я підкреслюю, що ми маємо справу саме 
+                з цією послідовностю. Також зауважу, що числа можуть повторюватись. Конкретно в нашому прикладі <span class="maths">\(a_1 = 3, a_7 = 3 \)</span>. Це був приклад числової послідовності.</p>
+        </div>
+
+        <div class="definition">
+            <p><em>Числовою послідовністю</em> називають занумерований набір чисел. <br> 
+                Позначення: <span class="maths">\( \{a_n, n \geq 1\} = \{a_1,a_2,a_3,\dots \} \)</span></p>
+        </div>
+
+        <div class="text">
+            <p>Числові послідовності можна задавати (принаймні я так знаю) трьома способами:
+                <ol type="I">
+                    <li>Випадковим чином</li>
+                    <li>Формулою</li>
+                    <li>Рекурсивно</li>
+                </ol>
+            </p>
+            <p>
+                <ol type="I">
+                    <li>Це приклад послідовності, що я надавав в самому початку.</li>
+                    <li>Встановимо послідовність \( \{a_n, n \geq 1 \} \) таким чином: \( a_n = \frac{1}{n} \). Тобто ми маємо послідовність з таких чисел:
+                        \( \{ 1, \frac{1}{2}, \frac{1}{3}, \dots \} \).</li>
+                    <li>Цей типаж є більш складним. Наприклад, послідовність \( \{b_n, n \geq 1 \} \) задамо ось так: \( b_1 = 1, b_n = 4 + b_{n-1}, n \geq 2 \). Тобто кожний
+                        член може бути отриманий через (не обов'язково одного) його попередника.</li>
+                </ol>
+            </p>
+        
+            <p>А тепер більш детально повернемось до послідовності формули <span class="maths">\( a_n = \frac{1}{n} \)</span> , оскільки він є більш особливим на розглядання.
+            Якщо отримати перші члени, то поки нічого цікавого ми не побачимо. Але ми розглянемо числа з великими номерами: <span class="maths">\( 100, 1000, 10000, \dots \)</span>. Математично
+            можна сказати так: <span class="maths">(n appr inf)</span>, "n прямує до нескінченності". Так ось, маємо такі числа: <br/>
+            \(a_{100} = \frac{1}{100} = 0.01 \) <br/>
+            \(a_{1000} = \frac{1}{1000} = 0.001 \) <br/>
+            \(a_{10000} = \frac{1}{10000} = 0.0001 \) <br/>
+            Можна зауважити, що, збільшуючи номер члена послідовності, ми все ближче наближаємось до числа <span class="maths">\(0 \)</span> за умовою, що 
+            <span class="maths">(n appr inf)</span>. Таку закономірність варто строго математично визначити. Проте для початку підемо здалеку.</p>
+            <p>Проставимо всі числа нашої послідовності на числовій прямій - буде така картина</p>
+            <img src="latex_learn-1.png">
+            <p>Червона точка - це моє число <span class="maths">\( 0\)</span>. Бачимо, що ми з кожним разом підходимо все ближче. Як записати формально 'підходимо все ближче'?</p>
+            <p>Встановимо навколо точки червоний коридор: ми відійдемо праворуч та ліворуч на деяке число <span class="maths">(let eps)</span>. Отримаємо інтервал 
+                <span class="maths">\( (0-\varepsilon, 0+\varepsilon) \)</span>. Якщо візьмемо <span class="maths">(let eps)</span> доволі великим, скажімо 1.5 або більше, то 
+                зауважимо, що всі чорні цяточки потраплять в наш створений коридор. Будемо поступово зменшувати її, хай буде <span class="maths">\( \varepsilon = 0.1 \)</span>. 
+                Уже тоді деякі члени послідовності лишаться за межами коридору, проте <em>починаючи з деякого номеру</em>, всі решта члени послідовностей потраплять всередину.
+                Як математично записати речення 'починаючи з деякого номеру, всі решта члени послідовностей потраплять всередину'? Ось так: 
+                <span class="maths">\( \exists N \in \mathbb{N}: \forall n \geq N: a_n \in (0-\varepsilon,0+\varepsilon) \)</span>. Якщо саме таке твердження виконується 
+                для будь-якого обраного <span class="maths">\( \varepsilon > 0 \)</span>, тобто  <span class="maths">\( \forall \varepsilon > 0 \)</span>, то число 
+                <span class="maths">\(0 \)</span> і називається границею числової послідовності <span class="maths">\( a_n = \dfrac{1}{n} \)</span>.
+            </p>
+            <p>А тепер узагальнимо наші знання таким означенням:</p>
+        </div>
+
+        <div class="definition">
+            <p id = "def_sequence_limit">Число <span class="maths">\( a \in \mathbb{R} \)</span> називається <em>границею послідовності</em> <span class="maths">\( \{a_n, n \geq 1\} \)</span>, якщо виконується таке твердження:
+                <br/>
+                <span class="maths">\( \forall \varepsilon > 0: \exists N \in \mathbb{N}: \forall n \geq N: a_n \in (a-\varepsilon,a+\varepsilon) \)</span>
+                <br/>
+                Позначення: <span class="maths">\( \displaystyle \lim_{n \to \infty} a_n = a \)</span> або інколи <span class="maths">\(a_n \to a, n \to \infty \)</span>.
+            </p>
+        </div>
+
+        <div class="text">
+            <p>Вираз <span class="maths">\( a_n \in (a-\varepsilon,a+\varepsilon) \)</span> можна записати нерівністю: <span class="maths">\( |a_n-a| < \varepsilon \)</span>.
+            </p>
+
+            <p>Повертаючись до послідовності <span class="maths">\( a_n = \dfrac{1}{n} \)</span>, ми з'ясували, що 
+                <span class="maths">\( \displaystyle \lim_{n \to \infty} \frac{1}{n} = 0 \)</span>. Спробуємо це довести строго за означенням.
+            </p>
+
+            <p>
+                Розглянемо нерівність <span class="maths">\( \left|{\dfrac{1}{n} - 0} \right| = \dfrac{1}{n} \overset{\text{хочемо}}{<} \varepsilon \)</span>.
+                Із цього випливає нерівність <span class="maths">\( n > \dfrac{1}{\varepsilon} \)</span>. Наша мрія: знайти таке <span class="maths">\(N\)</span>, щоб
+                наша отримана нерівність завжди виконувалась, починаючи з деякого номера <span class="maths">\( n \geq N \)</span>. Можемо встановити 
+                <span class="maths">\( N = \left[ \dfrac{1}{\varepsilon} \right] + 1 \)</span>. Саме це число більше за <span class="maths">\( \dfrac{1}{\varepsilon} \)</span>,
+                а також решта, що більше за нашого отриманого числа.
+            </p>
+
+            <p>
+                Підсумуємо, задаємо <span class="maths">(let eps)</span>, тоді існує <span class="maths">\( N = \left[ \dfrac{1}{\varepsilon} \right] + 1 \)</span>, такий, що
+                нерівність <span class="maths">\( \left|{\dfrac{1}{n} - 0} \right| < \varepsilon \)</span> виконується для будь-яких <span class="maths">\(n \geq N\)</span>.
+                Отже <span class="maths">\( \displaystyle \lim_{n \to \infty} \frac{1}{n} = 0 \)</span>.
+            </p>
+            <p>А зараз ми розглянемо більш складне доведення за означенням.</p>
+        </div>
+        
+        <div class="example">
+            <p>Довести за означенням, що <span class="maths">\( \displaystyle \lim_{n \to \infty} \sqrt[n]{n} = 1 \)</span> </p>
+        </div>
+        
+        <div class="solution">
+            <p>Розглянемо послідовність <span class="maths">\( \{ \sqrt[n]{n}, n \geq 1 \} \)</span>. Використовуючи <a href="#def_sequence_limit">означення границі</a>, ми хочемо довести, що
+            <span class="maths">\( \forall \varepsilon > 0: \exists N \in \mathbb{N}: \forall n \geq N: | \sqrt[n]{n} -1 | < \varepsilon \)</span>.
+            <br/>
+            Застосуємо <a href="https://uk.wikipedia.org/wiki/Нерівність_середнього_арифметичного_та_геометричного">нерівність Коші</a> - отримаємо оцінку 
+            <span class="maths">\( \sqrt[n]{n} = 
+                \sqrt[n]{ \sqrt{n} \sqrt{n} \cdot 1 \dots 1} \leq
+                 \dfrac{\sqrt{n}+\sqrt{n}+1+\dots+1}{n} = \dfrac{2\sqrt{n} + n-2}{n} = \dfrac{2}{\sqrt{n}} + 1 - \dfrac{2}{n} < \dfrac{2}{\sqrt{n}} + 1 (*) \)</span>.
+            <br/>
+            Тоді <span class="maths">\( |\sqrt[n]{n} - 1| = \sqrt[n]{n} - 1 \overset{(*)}{<} \dfrac{2}{\sqrt{n}} + 1 - 1 = \dfrac{2}{\sqrt{n}} \overset{\text{хочемо}}{<} \varepsilon \)</span>.
+            <br/>
+            Звідси отримаємо <span class="maths">\( \sqrt{n} > \dfrac{2}{\varepsilon} \iff n > \dfrac{4}{\varepsilon^2} \)</span>. Якщо покласти <span class="maths">N = \(
+                \left[ \dfrac{4}{\varepsilon} \right] + 1 \)</span>, то ми цим змогли довести, що наше означення виконано <span class="maths">\( \forall \varepsilon > 0 \)</span>.
+            <br/>
+            Отже, <span class="maths">\( \displaystyle \lim_{n \to \infty} \sqrt[n]{n} = 1 \)</span>
+            </p>
+        </div>
+
+        <div class="text">
+            <p>Віднині виникає питання, а якщо для такої послідовності границя є, то чи буде вона єдиною? Виявляється, що так, це буде розписано наступною теоремою:</p>
+        </div>
+
+        <div class="theorem">
+            <p>Задано послідовність <span class="maths">\( \{a_n, n \geq 1 \} \)</span>. Припустимо, що <span class="maths">\(a_n \to a_1, a_n \to a_2, n \to \infty \)</span>,
+            тобто послідовність має дві границі. Тоді <span class="maths">\(a_1 = a_2\)</span>.</p>
+        </div>
+
+        <div class="proof">
+            <p>Припустимо, що <span class="maths">\(a_1 \neq a_2\)</span>. Розпишемо те, що нам дано через <a href="#def_sequence_limit">означення границі</a>. Оскільки означення
+            виконано для будь-якого <span class="maths">(let eps)</span>, то зокрема для <span class="maths">\( \varepsilon = \dfrac{|a_2-a_1|}{2} > 0 \)</span>.
+            Тоді існують <span class="maths">\( N_1,N_2 \)</span>, для яких <span class="maths">\( |a_n - a_1| < \varepsilon \)</span> виконано <span class="maths">
+                \( \forall n \geq N_1 \)</span> та <span class="maths">\( |a_n - a_2| < \varepsilon \)</span> виконано <span class="maths">
+                    \( \forall n \geq N_2 \)</span>. Для того щоб ці нерівності виконувались одночано, ми зафіксуємо новий номер <span class="maths">\( N = \max \{ N_1,N_2 \} \)</span>
+                <br/>
+                Але тепер ми отримаємо нову оцінку, використовуючи <a>нерівність трикутника</a>: <span class="maths">\( |a_1 - a_2| = |a_1 - a + a - a_2| \leq |a_1 - a| + 
+                |a_2 - a| < 2 \varepsilon = |a_1-a_2| \)</span>. Тобто <span class="maths">\( |a_1-a_2| < |a_1-a_2| \)</span>, що не є можливим.
+            </p>
+        </div>
+    </div>
+    
+    <script src="dynamics.js"></script>
+</body>
