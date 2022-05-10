@@ -173,6 +173,7 @@ aside {
 	bottom: 0;
 	background-color: aliceblue;
 	border-left: 2px rgb(128, 128, 128, 0.5) solid;
+	z-index: 10;
 }
 
 #sidebarNavigation ul li {
@@ -221,6 +222,7 @@ aside {
 	flex-direction: column;
 	align-items: center;
 	margin-bottom: 5%;
+	margin: 0 2% 0 2%;
 }
 
 .mathSection:last-of-type {
@@ -228,11 +230,10 @@ aside {
 }
 
 #sectionImage {
-	width: 100%;
-	/*background-color: antiquewhite;*/
+	width: 60%;
 }
 
-#sectionImage>img {
+#sectionImage img {
 	width: 100%;
 }
 
@@ -323,6 +324,7 @@ footer p {
 	#introduction {
 		flex-direction: row;
 		justify-content: space-around;
+		align-items: center;
 	}
 
 	.content {
@@ -347,6 +349,12 @@ footer p {
 
 	.mathSection {
 		margin-bottom: 0%;
+		width: 33%;
+	}
+
+	#sectionImage {
+		width: 100%;
+		/*background-color: antiquewhite;*/
 	}
 
 	#content2 {
