@@ -64,6 +64,10 @@ a {
 	text-decoration: none;
 }
 
+a:visited {
+	color: white;
+}
+
 /*header*/
 header {
 	display: none;
@@ -130,6 +134,10 @@ nav {
 	background-color:aliceblue;
 	border-bottom: 2px solid;
 	border-color: rgb(128, 128, 128, 0.5);
+}
+
+nav a:visited, aside a:visited {
+	color:#2d2d2d;
 }
 
 #navigation {
@@ -259,6 +267,10 @@ footer a {
 	color: #35B5B6;
 	text-decoration: none;
 	font-size: 10px;
+}
+
+footer a:visited {
+	color: #35B5B6;
 }
 
 footer h4 {
