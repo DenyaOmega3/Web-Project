@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<base target ="_blank">-->
+        <title>Main Page</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous">
+        </script>
+
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+
+    <body>
+    <header>
+        <div id = "searchSocialMedia">
+            <div id = "accounts">
+                <ul>
+                    <li> <div class="circle"> <a href="https://t.me/Denya_alpha"> <img src="Navigation Images/TelegramImage.png" class = "icon" /> </a> </div> </li>
+                    <li> <div class="circle">  <a href = "https://www.instagram.com/?hl=en"> <img src="Navigation Images/InstagramImage.png" class = "icon" /> </a> </div> </li>
+                    <li> <div class="circle">  <a href = "https://twitter.com/?lang=en"> <img src="Navigation Images/TwitterImage.png" class = "icon" /> </a> </div> </li>
+                </ul>
+            </div>
+
+            <div id = "searchInWeb">
+                <div id = "accounts2"><input type="text" placeholder="Search.."/></div>
+                <div id = "accounts3"><button type="button">Click</button></div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div id = "company"> <span style="color:black; font-size: 30px;">M</span>ath <span style="color:black; font-size: 30px;">Σ</span>tori</p></div>
+
+        <div id = "navigation">
+            <ul>
+                <li><a>Home</a></li>
+                <li><a>Formulas</a></li>
+                <li><a>Login</a></li>
+            </ul>
+        </div>
+
+        <div id = "navigationAlternative">
+            ≡
+        </div>
+    </nav>
+
+    <aside>
+        <div id = "sidebarNavigation">
+            <ul>
+                <li id="close"><a>x</a></li>
+                <li><a>Home</a></li>
+                <li><a>Formulas</a></li>
+                <li><a>Login</a></li>
+            </ul>
+        </div>
+
+        <div id = "sidebarSocial">
+            <ul>
+                <li> <div class="circle"> <a href="https://t.me/Denya_alpha"> <img src="Navigation Images/TelegramImage.png" class = "icon" /> </a> </div> </li>
+                <li> <div class="circle">  <a href = "https://www.instagram.com/?hl=en"> <img src="Navigation Images/InstagramImage.png" class = "icon" /> </a> </div> </li>
+                <li> <div class="circle">  <a href = "https://twitter.com/?lang=en"> <img src="Navigation Images/TwitterImage.png" class = "icon" /> </a> </div> </li>
+            </ul>
+        </div>
+    </aside>
+
+    <div class="content">
+        <div class="text">
+            <h2>Послідовності</h2>
+            <p>(Арифметика границь) Якщо ми маємо <span class = "maths">\( \displaystyle\lim_{n \to \infty} a_n = a \)</span> та <span class = "maths">\( \displaystyle\lim_{n \to \infty} b_n = b \)</span>, то тоді: <br/>
+                <span class = "maths">\( \displaystyle\lim_{n \to \infty} a_n+b_n = a+b \)</span> <br/>
+                <span class = "maths">\( \displaystyle\lim_{n \to \infty} a_n \cdot b_n = a \cdot b \)</span> <br/>
+                <span class = "maths">\( \displaystyle\lim_{n \to \infty} \frac{a_n}{b_n} = \frac{a}{b} \)</span>, якщо додатково <span class="maths">\( b_n \neq 0 \)</span> <br/>
+            </p>
+            <br/>
+            <p>
+                (Теорема про двох поліцаїв) Якщо ми маємо <span class = "maths">\( \displaystyle\lim_{n \to \infty} a_n = a \)</span> та <span class = "maths">\( \displaystyle\lim_{n \to \infty} b_n = a \)</span>, а також
+                справедливо <span class = "maths">\( \exists N \in \mathbb{N}: \forall n \geq N: a_n \leq c_n \leq b_n \)</span>, то тоді <span class = "maths">\( \displaystyle\lim_{n \to \infty} c_n = a \)</span>
+            </p>
+            <br/>
+            <p>
+                (Теорема Вейєрштраса) Монотонно зростаюча та обмежена зверху послідовність збіжна. Монотонно спадна та обмежена знизу послідовність збіжна.
+            </p>
+            <br/>
+            <p>
+                (Про обмеженність) Будь-яка збіжна послідовність є обмеженою.
+            </p>
+            <br/>
+            <p>
+                (Деякі важливі границі) <span class = "maths">\( \displaystyle\lim_{n \to \infty} \frac{n^k}{a^n} = 0, \displaystyle\lim_{n \to \infty} \frac{a^n}{n!} = 0, \displaystyle\lim_{n \to \infty} \frac{n!}{n^n} = 0 \)</span>
+            </p>
+            <br/>
+            <p>
+                (Число Ейлера) <span class = "maths">\(\displaystyle \lim_{n \to \infty} \left( 1 + \frac{1}{n} \right)^n \overset{\text{def.}}{=} e \approx 2.71  \)</span>
+            </p>
+            <br/>
+            <p>
+                (Нерівність натурального логарифма) <span class = "maths">\(\displaystyle \frac{1}{n+1} < \ln \left( 1 + \frac{1}{n} \right) < \frac{1}{n}  \)</span>
+            </p>
+
+            <br/>
+            <p>
+                (Теорема Больцано-Вейєрштраса) Будь-яка обмежена послідовність має збіжну підпослідовність.
+            </p>
+
+            <br/>
+            <p>
+                (Критерій Коші) Послідовність збіжна тоді й тільки тоді, коли вона є фундаментальною.
+            </p>
+        </div>
+
+            <div class="text">
+                <h2>Функції, границі</h2>
+                <p>(Арифметика границь) Якщо ми маємо <span class = "maths">\( \displaystyle\lim_{x \to x_0} f(x) = a \)</span> та <span class = "maths">\( \displaystyle\lim_{x \to x_0} g(x) = b \)</span>, то тоді: <br/>
+                    <span class = "maths">\( \displaystyle\lim_{x \to x_0}f(x)+g(x) = a+b \)</span> <br/>
+                    <span class = "maths">\( \displaystyle\lim_{x \to x_0} f(x) \cdot g(x) = a \cdot b \)</span> <br/>
+                    <span class = "maths">\( \displaystyle\lim_{x \to x_0} \frac{f(x)}{g(x)} = \frac{a}{b} \)</span>, якщо додатково <span class="maths">\( g(x) \neq 0 \)</span> в околі точки <span class="maths">\(x_0 \)</span>. <br/>
+                </p>
+                <br/>
+                <p>
+                    (Перша чудова границя) <span class = "maths">\( \displaystyle\lim_{x \to 0} \frac{\sin x}{x} = 1 \)</span>
+                </p>
+                <br/>
+                <p>
+                    (Друга чудова границя) <span class = "maths">\( \displaystyle\lim_{x \to +\infty} \left( 1 + \frac{1}{x} \right)^x = e \)</span>
+                </p>
+                <br/>
+                <p>
+                    (Важливі еквівалентності при <span class="maths">\( x \to 0 \)</span>) <span class = "maths">\( \sin x \sim x, \tan x \sim x, \arcsin x \sim x, \arctan x \sim x \)</span> <br/>
+                    <span class = "maths">\( \ln(1+x) \sim x, e^x - 1 \sim x \)</span>
+                </p>
+                <br/>
+            </div>
+
+            <div class="text">
+                <h2>Інші формули</h2>
+                <p>(Формула Ньютона-Лейбніца) <span class = "maths">\( \displaystyle\int_a^b f(x)\,dx = F(b)-F(a) \)</span>, якщо функція інтегрована. </p>
+                <br/>
+                <p>(Дотична пряма до функції) <span class = "maths">\( y = f'(x_0)(x-x_0) + f(x_0) \)</span></p>
+                <br/>
+                <p>(Деяка сума) <span class = "maths">\( \displaystyle \sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6} \)</span></p>
+                <br/>
+                <p>(Ряд Фур'є) <span class = "maths">\( f(x) \to a_0 + \displaystyle \sum_{n=1}^\infty a_n \cos nx + b_n \sin nx \)</span>, де функція має період <span class="maths">\( 2\pi \)</span>, а також <br/>
+                    <span class = "maths">\( \displaystyle a_0 = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x)\,dx \)</span> <br/>
+                    <span class = "maths">\( \displaystyle a_n = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos nx \,dx \)</span> <br/>
+                    <span class = "maths">\( \displaystyle b_n = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin nx \,dx \)</span> <br/>
+                </p>
+            </div>
+    </div>
+
+    <footer>
+        <div id = "aboutContainer">
+            <div class = "about">
+                <h4>Посилання на літературу</h4>
+                <ul>
+                    <li><a href = "https://radfiz.org.ua/files/other/%E4%C5%CD%C9%C4%CF%D7%C9%DE.pdf" target="_blank">Задачник: Демідовіч</a></li>
+                    <li><a href = "http://pdf.lib.vntu.edu.ua/books/2015/Dorogovtsev_P1_1993_320.pdf" target="_blank">Теорія: Дороговцев</a></li>
+                </ul>
+            </div>
+            <div class = "about">
+                <h4>Contacts</h4>
+                <p>E-mail: <a>mvch15.1.denya.lobanov1@gmail.com</a></p>
+                <p>Тел.: +380*********</p>
+                <p>Компанія: KA-96 prod</p>
+            </div>
+        </div>
+        <p align = "center">Copyight © <span id = "currentYear"></span> - PSD-макет викрано.
+            <a href="https://www.os-templates.com/free-psd-templates/freshness" target="_blank">*Лінк*</a></p>
+    </footer>
+    </body>
+
+    <script src="dynamics.js"></script>
+</html>
